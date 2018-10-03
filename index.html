@@ -4,15 +4,32 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Test framework</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>hello world!</h1>
-	<script src="/js/showdown.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<div class="container">
+		<div class="row">
+			<header class="col-12-lg"><h1>VEOHRC Complaints Onboarding</h1></header>
+		</div>
+		<div class="row">		
+			<div class="col-6-lg" id="main">
+			</div>
+			<div class="col-6-lg" id="secondary">
+			</div>
+		</div>
+		<div class="row">
+			<footer class="col-12-lg">
+				<small>This is just a demo!!</small>	
+			</footer>
+		</div>
+	</div>
+	<script src="js/showdown.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		var converter = new showdown.Converter(),
-	    text      = '# hello, markdown!',
-	    html      = converter.makeHtml(text);
+	    text 			= '# hello, markdown!';
+	    context 		= document.getElementById("main");
+	    context.innerHTML 	= converter.makeHtml(text) ;
 	</script>
 </body>
 </html>
